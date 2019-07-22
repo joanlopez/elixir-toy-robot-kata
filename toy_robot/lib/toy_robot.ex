@@ -31,7 +31,7 @@ defmodule ToyRobot do
     iex> ToyRobot.place(0, 0, :north_east)
     {:failure, "Invalid facing direction"}
   """
-  def place(x, y, _facing) when x < @table_min_x or y < @table_min_y or x > @table_top_y or y > @table_top_y do
+  def place(x, y, _facing) when x < @table_min_x or y < @table_min_y or x > @table_max_y or y > @table_max_y do
     {:failure, "Invalid position"}
   end
 
